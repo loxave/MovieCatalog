@@ -14,4 +14,4 @@ https://developers.themoviedb.org/3
 This app will be success launch with real device, make sure run with real device. Thanks.
 
 ### Catatan:
-Aplikasi bisa berjalan dengan normal dengan perangkat asli , pastikan menggunakan perangkat asli saat menjalankan. Terima kasih.
+Aplikasi bisa berjalan dengan normal dengan perangkat asli, pastikan menggunakan perangkat asli saat menjalankan. Terima kasih.
