@@ -1,6 +1,7 @@
 # MovieCatalog
 
-## Recyclerview List Movie App Using tmdb api
+## Learn Recyclerview List Movie App Using tmdb api
+but only show id, title, release date, poster path.   
 https://developers.themoviedb.org/3
 
 ### Screenshoot 1
@@ -10,7 +11,7 @@ https://developers.themoviedb.org/3
 ![screenshoot_2](https://user-images.githubusercontent.com/70325408/134191459-a9190629-e4d4-4677-b9d0-aad577d89c8f.jpg)
 
 ### Note: 
-ENG: This app will be success launch with real device, make sure run with real device. Thanks.
+This app will be success launch with real device, make sure run with real device. Thanks.
 
 ### Catatan:
-ID: Aplikasi bisa berjalan dengan normal dengan perangkat asli , pastikan menggunakan perangkat asli saat menjalankan. Terima kasih.
+Aplikasi bisa berjalan dengan normal dengan perangkat asli , pastikan menggunakan perangkat asli saat menjalankan. Terima kasih.
