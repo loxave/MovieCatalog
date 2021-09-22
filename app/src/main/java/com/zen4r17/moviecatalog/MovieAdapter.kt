@@ -9,7 +9,6 @@ import com.zen4r17.moviecatalog.models.Movie
 import kotlinx.android.synthetic.main.movie_item.view.*
 
 class MovieAdapter(
-
     private val movies: List<Movie>
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
@@ -21,6 +20,11 @@ class MovieAdapter(
 
             itemView.movie_title.text = movie.title
             itemView.movie_release_date.text = movie.release
+            itemView.movie_overview.text = movie.overview
+            itemView.movie_original_language.text = movie.original_language
+            itemView.movie_backdrop_path.text = movie.backdrop_path
+            itemView.movie_original_title.text = movie.original_title
+            itemView.movie_popularity.text = movie.popularity
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
 
         }

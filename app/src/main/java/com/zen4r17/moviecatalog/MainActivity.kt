@@ -18,6 +18,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        val listMovie = listOf(
+//            Movie(
+//                title = "Kate",
+//                poster = "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
+//                release = ""
+//            ),
+//            Movie(
+//                title = "Kate",
+//                poster = "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
+//                release = ""
+//            ),
+//            Movie(
+//                title = "Kate",
+//                poster = "\"https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
+//                release = ""
+//            ),
+//        )
+
+//        val movieAdapter = MovieAdapter(listMovie)
+
+//        rv_movies_list.apply {
+//            layoutManager = LinearLayoutManager(this@MainActivity)
+//            adapter = movieAdapter
+//        }
+
         rv_movies_list.layoutManager = LinearLayoutManager(this)
         rv_movies_list.setHasFixedSize(true)
 
@@ -40,4 +65,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+
 }
