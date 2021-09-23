@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
                 movies: List<Movie> ->
             movie_adapter = MovieAdapter(movies)
             rv_movies_list.adapter = movie_adapter
-            // Move with intent
+
+
             movie_adapter.onClickItem = {
                 val move = Intent(this,MovieDetailActivity::class.java)
                 move.putExtra(MovieDetailActivity.EXTRA, it)

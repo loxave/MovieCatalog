@@ -18,7 +18,7 @@ import retrofit2.Response
 
 class MovieDetailActivity : AppCompatActivity() {
 
-    private var data: Movie? = null
+    private var dataFilm: Movie? = null
 
     companion object {
 
@@ -32,18 +32,18 @@ class MovieDetailActivity : AppCompatActivity() {
 //        val id: Int = intent.getIntExtra("ID", 0)
 //        getDetailMovie(id)
 
-        data = intent.getParcelableExtra(EXTRA)
+        dataFilm = intent.getParcelableExtra(EXTRA)
 
-        if (data != null) {
+        if (dataFilm!= null) {
 
             val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
             Glide.with(this)
-                .load(IMAGE_BASE + data?.poster)
+                .load(IMAGE_BASE + dataFilm?.poster)
                 .apply(RequestOptions())
                 .into(movie_poster_detail)
 
-            movie_title_detail.text = data?.title
-            tv_overview.text = data?.overview
+            movie_title_detail.text = dataFilm?.title
+            tv_overview.text = dataFilm?.overview
         }
 
         btn_back.setOnClickListener {
