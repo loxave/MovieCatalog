@@ -1,5 +1,6 @@
 package com.zen4r17.moviecatalog
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,41 +15,25 @@ import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var movie_adapter: MovieAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val listMovie = listOf(
-//            Movie(
-//                title = "Kate",
-//                poster = "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
-//                release = ""
-//            ),
-//            Movie(
-//                title = "Kate",
-//                poster = "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
-//                release = ""
-//            ),
-//            Movie(
-//                title = "Kate",
-//                poster = "\"https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg",
-//                release = ""
-//            ),
-//        )
-
-//        val movieAdapter = MovieAdapter(listMovie)
-
-//        rv_movies_list.apply {
-//            layoutManager = LinearLayoutManager(this@MainActivity)
-//            adapter = movieAdapter
-//        }
-
         rv_movies_list.layoutManager = LinearLayoutManager(this)
-        rv_movies_list.setHasFixedSize(true)
-
-        getMovieData { movies: List<Movie> ->
-            rv_movies_list.adapter = MovieAdapter(movies)
+        getMovieData {
+                movies: List<Movie> ->
+            movie_adapter = MovieAdapter(movies)
+            rv_movies_list.adapter = movie_adapter
+            // Move with intent
+            movie_adapter.onClickItem = {
+                val move = Intent(this,MovieDetailActivity::class.java)
+                move.putExtra(MovieDetailActivity.EXTRA, it)
+                startActivity(move)
+            }
         }
+        rv_movies_list.setHasFixedSize(true)
     }
 
     private fun getMovieData(callback: (List<Movie>) -> Unit) {

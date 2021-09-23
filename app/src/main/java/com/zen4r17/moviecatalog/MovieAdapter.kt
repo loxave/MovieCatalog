@@ -12,6 +12,8 @@ class MovieAdapter(
     private val movies: List<Movie>
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
+    var onClickItem: ((Movie) -> Unit)? = null
+
     class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
