@@ -1,7 +1,7 @@
-package com.zen4r17.moviecatalog.services
+package com.zen4r17.moviecatalog.interfaces
 
 
-import com.zen4r17.moviecatalog.models.MovieResponse
+import com.zen4r17.moviecatalog.MovieResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

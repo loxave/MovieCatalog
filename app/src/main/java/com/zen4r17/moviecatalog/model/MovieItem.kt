@@ -1,4 +1,4 @@
-package com.zen4r17.moviecatalog.models
+package com.zen4r17.moviecatalog.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 
-data class Movie(
+data class MovieItem(
     @SerializedName("id")
     val id: String?,
 
