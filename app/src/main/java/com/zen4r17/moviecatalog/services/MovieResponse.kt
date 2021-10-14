@@ -1,4 +1,4 @@
-package com.zen4r17.moviecatalog
+package com.zen4r17.moviecatalog.services
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
