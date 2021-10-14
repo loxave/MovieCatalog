@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zen4r17.moviecatalog.*
+import com.zen4r17.moviecatalog.Home.MoviePresenter
+import com.zen4r17.moviecatalog.Home.MovieView
 import com.zen4r17.moviecatalog.interfaces.MovieApiInterface
 import com.zen4r17.moviecatalog.model.MovieItem
 import com.zen4r17.moviecatalog.services.MovieApiService
+import com.zen4r17.moviecatalog.services.MovieResponse
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MovieView {
 
     private lateinit var movie_adapter: MovieAdapter
+    private var presenter: MoviePresenter? = null
 
-    //private lateinit var moviePresenter: MoviePresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,5 +55,19 @@ class MainActivity : AppCompatActivity() {
 //            return callback(response)
             }
         })
+    }
+
+    override fun onProgress() {
+    }
+
+    override fun onSuccess(response: okhttp3.Response) {
+    }
+
+    override fun onAttach() {
+        presenter?.onAttach(this)
+    }
+
+    override fun onDetach() {
+        presenter?.onDetach()
     }
 }

@@ -21,7 +21,6 @@ class MovieDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
-
 //        val id: Int = intent.getIntExtra("ID", 0)
 //        getDetailMovie(id)
 
@@ -44,6 +43,5 @@ class MovieDetailActivity : AppCompatActivity() {
             val back = Intent(this, MainActivity::class.java)
             startActivity(back)
         }
-
     }
 }
